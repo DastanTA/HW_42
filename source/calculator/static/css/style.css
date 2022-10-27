@@ -1,0 +1,37 @@
+body {
+    font-family:
+}
+
+p {
+    font-size: 25px;
+    color: grey;
+}
+
+p.warning {
+    color: red
+}
+
+.numbers {
+    margin-top: 40px;
+    width: 350px;
+}
+
+label.in_numbers {
+   display: inline-block;
+   width: 150px;
+   text-align: right;
+}
+
+.radio_box {
+    margin-top: 20px;
+    padding-left: 145px;
+}
+
+.radio_inp {
+    display: inline-block;
+}
+
+.calc {
+    margin-top: 15px;
+    padding-left: 10px;
+}

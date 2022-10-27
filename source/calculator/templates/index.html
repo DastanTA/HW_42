@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW_42</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+    <form action="">
+        {% csrf_token %}
+        <div class="numbers">
+            <label class="in_numbers" for="first">First Number:</label>
+            <input required type="number" id="first" name="first_number"><br><br>
+            <label class="in_numbers" for="second">Second Number:</label>
+            <input required type="number" id="second" name="second_number"><br>
+        </div>
+
+        <div class="radio_box">
+            <input type="radio" id="add" name="operation" value="add">
+            <label for="add">add</label><br>
+            <input type="radio" id="subtract" name="operation" value="subtract">
+            <label for="subtract">subtract</label><br>
+            <input type="radio" id="multiply" name="operation" value="multiply">
+            <label for="multiply">multiply</label><br>
+            <input type="radio" id="divide" name="operation" value="divide">
+            <label for="divide">divide</label><br>
+            <div class="calc">
+                <input type="submit" value="Calculate">
+            </div>
+        </div>
+    </form>
+
+    <div><p class="warning">{{warning}}</p></div>
+
+    <div><p>Result: {{first_number}} {{operation}} {{second_number}} {{equals}} {{result}}</p></div>
+
+</div>
+</body>
+</html>
